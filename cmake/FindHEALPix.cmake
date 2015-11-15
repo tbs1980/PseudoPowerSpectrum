@@ -11,12 +11,12 @@
 #
 # HEALPix_LIBRARIES   = full path to the libraries
 #
-# HEALPix_INCLUDE_DIRS      = where to find headers
+# HEALPix_INCLUDE_DIR      = where to find headers
 #
 # HEALPix_ROOT = search path
 # --------------------------------
 
-find_path(HEALPix_INCLUDE_DIRS NAMES healpix_base.h PATHS ${HEALPix_ROOT} PATH_SUFFIXES include)
+find_path(HEALPix_INCLUDE_DIR NAMES healpix_base.h PATHS ${HEALPix_ROOT} PATH_SUFFIXES include)
 
 find_library(HEALPix_CXX_LIB NAMES libhealpix_cxx.a PATHS ${HEALPix_ROOT} PATH_SUFFIXES lib)
 find_library(HEALPix_CXX_SUPPORT_LIB NAMES libcxxsupport.a PATHS ${HEALPix_ROOT}  PATH_SUFFIXES lib)
@@ -30,6 +30,6 @@ set(HEALPix_LIBRARIES ${HEALPix_CXX_LIB}
 
 include(FindPackageHandleStandardArgs)
 
-find_package_handle_standard_args(HEALPix DEFAULT_MSG HEALPix_INCLUDE_DIRS HEALPix_LIBRARIES)
+find_package_handle_standard_args(HEALPix DEFAULT_MSG HEALPix_INCLUDE_DIR HEALPix_LIBRARIES)
 
-mark_as_advanced(HEALPix_INCLUDE_DIRS HEALPix_LIBRARIES)
+mark_as_advanced(HEALPix_INCLUDE_DIR HEALPix_LIBRARIES)
