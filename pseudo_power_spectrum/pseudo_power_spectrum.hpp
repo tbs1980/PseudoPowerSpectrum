@@ -7,6 +7,4 @@
 
 #include <Eigen/Core>
 
-#include "healpix_io.hpp"
-
 #endif //PSEUDO_POWER_SPECTRUM_PSEUDO_POWER_SPECTRUM_HPP

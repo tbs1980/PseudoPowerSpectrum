@@ -10,13 +10,8 @@ endif()
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 find_package(Eigen3 REQUIRED)
-find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 find_package(HEALPix REQUIRED)
 
-message("Boost_INCLUDE_DIR = ${Boost_INCLUDE_DIR}")
-message("EIGEN3_INCLUDE_DIR = ${EIGEN3_INCLUDE_DIR}")
-
-include_directories(${Boost_INCLUDE_DIR})
 include_directories(${HEALPix_INCLUDE_DIR})
 include_directories(${EIGEN3_INCLUDE_DIR})
 include_directories(${CMAKE_SOURCE_DIR})
